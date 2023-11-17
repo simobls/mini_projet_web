@@ -15,12 +15,18 @@
                 <input type="text" name="user" placeholder=" username">
                 <p class="text">Password :</p>
                 <input type="password" name="pwd" placeholder=" password"><br><br>
-                <button type="submit"> LogIn </button>
+                <button type="submit" name="submit"> LogIn </button>
             </form>
         </div>
         <div class="illu">
             <img src="assets/3515462.jpg" alt="">
         </div>
     </section>
+    <?php
+        if(isset($_POST["submit"])){
+            $user = $_POST["user"];
+            $pwd = $_POST["pwd"];
+        }
+    ?>
 </body>
 </html>
