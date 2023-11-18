@@ -172,6 +172,7 @@ body {
 @media (max-width : 900px){
 	.illu {
 		display: none;
+		flex: 0;
 	}
 	.illu img {
 		display: none;
@@ -179,5 +180,8 @@ body {
 	.cont {
 		width: 400px;
 		height: 600px;
+	}
+	.formul {
+		flex: 1;
 	}
 }
