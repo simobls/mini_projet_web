@@ -9,12 +9,12 @@
 <body>
     <section class="cont">
         <div class="formul">
-            <p class="welcome">Welcome Back!</p>
+            <p class="welcome">Bienvenue, Admin</p>
             <form method="post">
-                <p class="text">Username :</p>
-                <input type="text" name="user" placeholder=" username">
-                <p class="text">Password :</p>
-                <input type="password" name="pwd" placeholder=" password"><br><br>
+                <input type="text" name="user" required="required">
+                <label class="text">Nom d'utilisateur</label><br>
+                <input type="password" name="pwd" required="required">
+                <label class="text2">Mot de passe</label>
                 <button type="submit" name="submit"> LogIn </button>
             </form>
         </div>
