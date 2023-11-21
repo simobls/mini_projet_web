@@ -34,8 +34,8 @@
                     <th>Statut</th>
                     <th></th>
                 </tr>
-				<tr>
-                    <td>1</td>
+				<!-- <tr> -->
+                    <!-- <td>1</td>
                     <td>Phone</td>
                     <td>1200MAD</td>
                     <td>12</td>
@@ -45,43 +45,7 @@
 						<img src="/assets/edit.png" alt="" class="img1">
 						<img src="/assets/bin.png" alt="" class="img2">
 					</td>
-                </tr>
-				<tr>
-                    <td>1</td>
-                    <td>Phone</td>
-                    <td>1200MAD</td>
-                    <td>12</td>
-					<td>Depot 3</td>
-                    <td><button>Actif</button></td>
-                    <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
-				<tr>
-                    <td>1</td>
-                    <td>Phone</td>
-                    <td>1200MAD</td>
-                    <td>12</td>
-					<td>Depot 3</td>
-                    <td><button>Actif</button></td>
-                    <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
-				<tr>
-                    <td>1</td>
-                    <td>Phone</td>
-                    <td>1200MAD</td>
-                    <td>12</td>
-					<td>Depot 3</td>
-                    <td><button>Actif</button></td>
-                    <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
+                </tr> -->
 				<hr>
                 <?php
                     include "connexion.php";
@@ -89,15 +53,16 @@
                     while($row=mysqli_fetch_array($req)){
 
                 ?>
-				<hr>
                 <tr>
                     <td><?php echo $row['ID'];?></td>
                     <td><?php echo $row['Nom'];?></td>
                     <td><?php echo $row['Prix'];?>MAD</td>
                     <td><?php echo $row['Quantite'];?></td>
-					<td><?php echo $row['Local'];?></td>
-                    <td><button></button></td>
-                    <td><button></button><button></button></td>
+                    <td><button>Actif</button></td>
+                    <td class="opt">
+						<img src="/assets/edit.png" alt="" class="img1">
+						<img src="/assets/bin.png" alt="" class="img2">
+					</td>
                 </tr>
 				<hr>
                 <?php
