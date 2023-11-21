@@ -1,4 +1,9 @@
-@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lora:wght@500&family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Rokkitt:wght@500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 body {
 	background-color: whitesmoke;
 	margin: 0;
@@ -85,10 +90,16 @@ body {
 	opacity: 0.8;
 }
 
+.ajout button a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
 table {
 	width: 90%;
 	text-align: center;
 	margin: 20px;
+	margin-left: 30px;
 }
 
 table th {
@@ -100,6 +111,9 @@ table th {
 table td {
 	width: 10%;
 	pointer-events: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+	font-weight: 500;
 }
 hr {
 	border-top: 1px solid whitesmoke;
