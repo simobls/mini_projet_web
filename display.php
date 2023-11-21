@@ -40,8 +40,47 @@
                     <td>1200MAD</td>
                     <td>12</td>
 					<td>Depot 3</td>
-                    <td><button></button></td>
-                    <td><button></button><button></button></td>
+                    <td><button>Actif</button></td>
+                    <td class="opt">
+						<img src="/assets/edit.png" alt="" class="img1">
+						<img src="/assets/bin.png" alt="" class="img2">
+					</td>
+                </tr>
+				<tr>
+                    <td>1</td>
+                    <td>Phone</td>
+                    <td>1200MAD</td>
+                    <td>12</td>
+					<td>Depot 3</td>
+                    <td><button>Actif</button></td>
+                    <td class="opt">
+						<img src="/assets/edit.png" alt="" class="img1">
+						<img src="/assets/bin.png" alt="" class="img2">
+					</td>
+                </tr>
+				<tr>
+                    <td>1</td>
+                    <td>Phone</td>
+                    <td>1200MAD</td>
+                    <td>12</td>
+					<td>Depot 3</td>
+                    <td><button>Actif</button></td>
+                    <td class="opt">
+						<img src="/assets/edit.png" alt="" class="img1">
+						<img src="/assets/bin.png" alt="" class="img2">
+					</td>
+                </tr>
+				<tr>
+                    <td>1</td>
+                    <td>Phone</td>
+                    <td>1200MAD</td>
+                    <td>12</td>
+					<td>Depot 3</td>
+                    <td><button>Actif</button></td>
+                    <td class="opt">
+						<img src="/assets/edit.png" alt="" class="img1">
+						<img src="/assets/bin.png" alt="" class="img2">
+					</td>
                 </tr>
 				<hr>
                 <?php
