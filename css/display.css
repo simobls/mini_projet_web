@@ -1,0 +1,86 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+body {
+	background-color: whitesmoke;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.cont {
+	display: flex;
+	flex-direction: column;
+	height: 550px;
+	width: 1000px;
+	margin: auto;
+	margin-top: 55px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius:25px;
+	background-color: white;
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+	-ms-border-radius:25px;
+	-o-border-radius:25px;
+	position: relative;
+	margin: auto;
+	margin-top: 33px;
+	overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 30px 60px 10px 60px;
+}
+
+.search {
+	display: flex;
+}
+
+.nav button {
+	border-radius: 15px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 8px 20px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border: none;
+	background-color: rgb(74, 241, 185);
+}
+.search button {
+	border-radius: 10px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 8px 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border: none;
+	background-color: rgb(74, 241, 185);
+	margin-left: 20px;
+}
+.nav button img {
+	width: 15px;
+	height: 15px;
+}
+
+.nav input{
+	border-radius: 15px;
+	box-sizing: border-box;
+	padding: 8px 20px;
+	border: none;
+	background-color: whitesmoke;
+	outline: none;
+	background-image: url(/assets/search-interface-symbol\ \(1\).png);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+	background-size: 15px 15px;
+	background-position: 12px 8px;
+	opacity: 0.8;
+}

@@ -8,23 +8,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/display.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
+    <div class="cont">
+        <div class="nav">
             <div class="ajout">
-                <button>Add item</button>
+                <button> + Add item </button>
             </div>
             <div class="search">
-                <button>Search</button>
-            </div>
-            <div class="filter">
-                <button></button>
+                <input type="text" placeholder="Search"></input>
+                <button><img src="assets/empty-filter-32.png" alt=""></button>
+				
             </div>
         </div>
-        <div class="table">
+        <div class="display">
             <table>
                 <tr>
                     <td>ID</td>
@@ -32,7 +31,7 @@
                     <td>Prix</td>
                     <td>Quantite</td>
                     <td>Statut</td>
-                    <td>Action</td>
+                    <td></td>
                 </tr>
                 <?php
                     include "connexion.php";
@@ -51,6 +50,7 @@
                 <?php
                     }
                 ?>
+				</table>
         </div>
     </div>
 </body>

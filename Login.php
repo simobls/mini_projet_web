@@ -9,7 +9,7 @@
 <body>
     <?php
         if(isset($_POST["submit"])){
-            $emailU=$_POST['email'];
+            $emailU=$_POST['user'];
             $passU=$_POST['password'];
             $erreur="";
     
@@ -21,7 +21,7 @@
             if(mysqli_num_rows($res)>0){
                 header("Location:display.php");
             }
-            else $erreur="Email ou mot de passe incorrect";
+            else $erreur="Nom d'utilisateur ou Mot de passe incorrect";
         }
     ?>
     <section class="cont">
@@ -36,7 +36,7 @@
             <form method="post">
                 <input type="text" name="user" required="required">
                 <label class="text">Nom d'utilisateur</label><br>
-                <input type="password" name="pwd" required="required">
+                <input type="password" name="password" required="required">
                 <label class="text2">Mot de passe</label>
                 <button type="submit" name="submit"> LogIn </button>
             </form>
