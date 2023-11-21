@@ -26,27 +26,41 @@
         <div class="display">
             <table>
                 <tr>
-                    <td>ID</td>
-                    <td>Nom</td>
-                    <td>Prix</td>
-                    <td>Quantite</td>
-                    <td>Statut</td>
-                    <td></td>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Quantite</th>
+					<th>Location</th>
+                    <th>Statut</th>
+                    <th></th>
                 </tr>
+				<tr>
+                    <td>1</td>
+                    <td>Phone</td>
+                    <td>1200MAD</td>
+                    <td>12</td>
+					<td>Depot 3</td>
+                    <td><button></button></td>
+                    <td><button></button><button></button></td>
+                </tr>
+				<hr>
                 <?php
                     include "connexion.php";
                     $req=mysqli_query($cnx,"Select * from Produits");
                     while($row=mysqli_fetch_array($req)){
 
                 ?>
+				<hr>
                 <tr>
                     <td><?php echo $row['ID'];?></td>
                     <td><?php echo $row['Nom'];?></td>
                     <td><?php echo $row['Prix'];?>MAD</td>
                     <td><?php echo $row['Quantite'];?></td>
+					<td><?php echo $row['Local'];?></td>
                     <td><button></button></td>
                     <td><button></button><button></button></td>
                 </tr>
+				<hr>
                 <?php
                     }
                 ?>
