@@ -1,0 +1,38 @@
+body {
+	background-color: whitesmoke;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.ajout {
+	display: flex;
+	flex-direction: column;
+	height: 450px;
+	width: 500px;
+	margin: auto;
+	margin-top: 55px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius:25px;
+	background-color: white;
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+	-ms-border-radius:25px;
+	-o-border-radius:25px;
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+.ajout h1 {
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+form div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

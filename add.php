@@ -3,20 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add.css">
 	<title>Document</title>
 </head>
 <body>
-<div class="ajout2" id="ajout">
+<div class="ajout" id="ajout">
 		<h1>Ajouter un produit</h1>
 		<form action="" method="post" >
-        <label class="nom">Nom:</label>
-        <input type="text" name="nom" placeholder="Nom Produit">
-        <label class="nom">Prix:</label>
-        <input type="text" name="prix" placeholder="Prix Produit">
-        <label class="nom">Quantite:</label>
-        <input type="text" name="quant" placeholder="Quantite Produit"><br>
-        <button type="submit" name="OK" >Ajouter</button>
-        <button type="reset">Annuler</button>
+        <div>
+            <label class="nom">Nom:</label>
+            <input type="text" name="nom" placeholder="Nom du produit">
+        </div>
+        <div>
+            <label class="nom">Location:</label>
+            <input type="text" name="loca" placeholder="Location du stock"><br>
+        </div>
+        <div>
+            <label class="nom">Prix:</label>
+            <input type="text" name="prix" placeholder="Prix">
+            <label class="nom">Quantite:</label>
+            <input type="text" name="quant" placeholder="Quantite"><br>
+        </div>
+        <div>
+            <button type="submit" name="OK" >Ajouter</button>
+            <button type="reset">Annuler</button>
+        </div>
 		</form>
     </div>
     <?php

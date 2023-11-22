@@ -1,8 +1,3 @@
-<?php
-
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +10,13 @@
     <div class="cont">
         <div class="nav">
             <div class="ajout">
-                <button><a href="/add.php"> + Ajouter </a></button>
+                <button><a href="add.php"> + Add item </a></button>
             </div>
             <div class="search">
-                <input type="text" placeholder="Recherche"></input>
-                <button><img src="assets/empty-filter-32.png" alt=""></button>
-				
+                <form method="GET"> <!-- Ajout de la méthode GET -->
+                    <input type="search" placeholder="Search" name="search"></input>
+                </form>
+                <button type="submit"><img src="assets/empty-filter-32.png" alt=""></button>
             </div>
         </div>
         <div class="display">
@@ -30,75 +26,82 @@
                     <th>Nom</th>
                     <th>Prix</th>
                     <th>Quantite</th>
+                    <th>Location</th>
                     <th>Statut</th>
                     <th></th>
                 </tr>
-				<tr>
-                    <td>1</td>
+                <!-- <tr> -->
+                    <!-- <td>1</td>
                     <td>Phone</td>
                     <td>1200MAD</td>
                     <td>12</td>
+                    <td>Depot 3</td>
                     <td><button>Actif</button></td>
                     <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
-				<hr>
-				<tr>
-                    <td>1</td>
-                    <td>Phone</td>
-                    <td>1200MAD</td>
-                    <td>12</td>
-                    <td><button>Actif</button></td>
-                    <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
-				<tr>
-                    <td>1</td>
-                    <td>Phone</td>
-                    <td>1200MAD</td>
-                    <td>12</td>
-                    <td><button>Actif</button></td>
-                    <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
-				<tr>
-                    <td>1</td>
-                    <td>Phone</td>
-                    <td>1200MAD</td>
-                    <td>12</td>
-                    <td><button>Actif</button></td>
-                    <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
-                <?php
-                    include "connexion.php";
-                    $req=mysqli_query($cnx,"Select * from Produits");
-                    while($row=mysqli_fetch_array($req)){
-                ?>
-                <tr>
-                    <td><?php echo $row['ID'];?></td>
-                    <td><?php echo $row['Nom'];?></td>
-                    <td><?php echo $row['Prix'];?>MAD</td>
-                    <td><?php echo $row['Quantite'];?></td>
-                    <td><button>Actif</button></td>
-                    <td class="opt">
-						<img src="/assets/edit.png" alt="" class="img1">
-						<img src="/assets/bin.png" alt="" class="img2">
-					</td>
-                </tr>
-                <?php
+                        <img src="/assets/edit.png" alt="" class="img1">
+                        <img src="/assets/bin.png" alt="" class="img2">
+                    </td>
+                </tr> -->
+                <hr>
+                <!-- ... -->
+
+            <?php
+            include "connexion.php";
+            $search = null;
+                if (isset($_GET['search'])) {
+                    $search = $_GET['search'];
+                    if (preg_match('/^[[:alnum:]]/', $search)) {
+                        $req = mysqli_query($cnx, "SELECT * FROM produits WHERE Nom = '$search'");
                     }
-                ?>
-				<hr>
-				</table>
+                    else {
+                        $req = mysqli_query($cnx, "SELECT * FROM produits");
+                    }
+                    
+                    while ($row = mysqli_fetch_assoc($req)) {
+                        ?>
+                        <tr>
+                            <td><?php echo $row['ID']; ?></td>
+                            <td><?php echo $row['Nom']; ?></td>
+                            <td><?php echo $row['Prix']; ?>MAD</td>
+                            <td><?php echo $row['Quantite']; ?></td>
+                            <td><?php echo $row['Location']; ?></td>
+                            <?php
+                            if ($row['Quantite'] > 0) echo '<td><button class="actif">Actif</button></td>';
+                            else echo '<td><button class="solde">Solde</button></td>';
+                            ?>
+                            <td class="opt">
+                                <img src="edit.png" alt="" class="img1">
+                                <img src="bin.png" alt="" class="img2">
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                }
+                else
+                {
+                        $req = mysqli_query($cnx, "SELECT * FROM produits");
+                    while ($row = mysqli_fetch_assoc($req)) {
+                        ?>
+                        <tr>
+                            <td><?php echo $row['ID']; ?></td>
+                            <td><?php echo $row['Nom']; ?></td>
+                            <td><?php echo $row['Prix']; ?>MAD</td>
+                            <td><?php echo $row['Quantite']; ?></td>
+                            <td><?php echo $row['Location']; ?></td>
+                            <?php
+                            if ($row['Quantite'] > 0) echo '<td><button class="actif">Actif</button></td>';
+                            else echo '<td><button class="solde">Solde</button></td>';
+                            ?>
+                            <td class="opt">
+                                <img src="edit.png" alt="" class="img1">
+                                <img src="bin.png" alt="" class="img2">
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                }
+            ?>
+            </table>
         </div>
     </div>
 </body>
