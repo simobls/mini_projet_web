@@ -104,7 +104,7 @@
                         while ($row = mysqli_fetch_assoc($req)) {
                             ?>
                             <tr>
-                                <td><?php $row['ID']; ?></td>
+                                <td><?php echo $row['ID']; ?></td>
                                 <td><?php echo $row['Nom']; ?></td>
                                 <td><?php echo $row['Prix']; ?>MAD</td>
                                 <td><?php echo $row['Quantite']; ?></td>
@@ -127,7 +127,6 @@
                         while ($row = mysqli_fetch_assoc($req)) {
                             ?>
                             <tr>
-                                <?php $index++; ?>
                                 <td><?php echo $row['ID']; ?></td>
                                 <td><?php echo $row['Nom']; ?></td>
                                 <td><?php echo $row['Prix']; ?>MAD</td>
