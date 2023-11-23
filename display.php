@@ -33,56 +33,64 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>Phone</td>
-                        <td>1200MAD</td>
+                        <td>salam</td>
+                        <td>12233MAD</td>
                         <td>12</td>
-                        <td>Depot 3</td>
-                        <td><button>Dispo</button></td>
+                        <td>depot1</td>
+                        <td><button class="actif">Actif</button></td>
                         <td class="opt">
-                            <button><img src="/assets/edit.png" alt="" class="img1"></button>
-                            <button><img src="/assets/bin.png" alt="" class="img2"></button>
+                            <form method="get">
+                                <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                                <button name="delete" type="submit"><img src="/assets/bin.png" alt="" class="img2" ></button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>jacket</td>
-                        <td>1200MAD</td>
+                        <td>salam</td>
+                        <td>12233MAD</td>
                         <td>12</td>
-                        <td>Depot 3</td>
-                        <td><button>Disponible</button></td>
+                        <td>depot1</td>
+                        <td><button class="actif">Actif</button></td>
                         <td class="opt">
-                            <button><img src="/assets/edit.png" alt="" class="img1"></button>
-                            <button><img src="/assets/bin.png" alt="" class="img2"></button>
+                            <form method="get">
+                                <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                                <button name="delete" type="submit"><img src="/assets/bin.png" alt="" class="img2" ></button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>Phone</td>
-                        <td>1200MAD</td>
+                        <td>salam</td>
+                        <td>12233MAD</td>
                         <td>12</td>
-                        <td>Depot 3</td>
-                        <td><button>Vendu</button></td>
+                        <td>depot1</td>
+                        <td><button class="actif">Actif</button></td>
                         <td class="opt">
-                            <button><img src="/assets/edit.png" alt="" class="img1"></button>
-                            <button><img src="/assets/bin.png" alt="" class="img2"></button>
+                            <form method="get">
+                                <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                                <button name="delete" type="submit"><img src="/assets/bin.png" alt="" class="img2" ></button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>Phone</td>
-                        <td>1200MAD</td>
+                        <td>salam</td>
+                        <td>12233MAD</td>
                         <td>12</td>
-                        <td>Depot 3</td>
-                        <td><button>Actif</button></td>
+                        <td>depot1</td>
+                        <td><button class="actif">Actif</button></td>
                         <td class="opt">
-                            <button><img src="/assets/edit.png" alt="" class="img1"></button>
-                            <button><img src="/assets/bin.png" alt="" class="img2" name="delete"></button>
+                            <form method="get">
+                                <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                                <button name="delete" type="submit"><img src="/assets/bin.png" alt="" class="img2" ></button>
+                            </form>
                         </td>
                     </tr>
-                    <hr>
 
                 <?php
                 include "connexion.php";
+                $index = 0;
                 $search = null;
                     if (isset($_GET['search'])) {
                         $search = $_GET['search'];
@@ -96,7 +104,7 @@
                         while ($row = mysqli_fetch_assoc($req)) {
                             ?>
                             <tr>
-                                <td><?php echo $row['ID']; ?></td>
+                                <td><?php $row['ID']; ?></td>
                                 <td><?php echo $row['Nom']; ?></td>
                                 <td><?php echo $row['Prix']; ?>MAD</td>
                                 <td><?php echo $row['Quantite']; ?></td>
@@ -105,10 +113,10 @@
                                 if ($row['Quantite'] > 0) echo '<td><button class="actif">Actif</button></td>';
                                 else echo '<td><button class="solde">Solde</button></td>';
                                 ?>
-                                <td class="opt">
-                                    <button><img src="/assets/edit.png" alt="" class="img1"></button>
-                                    <button><img src="/assets/bin.png" alt="" class="img2"></button>
-                                </td>
+                                <form method="get">
+                                    <button><img src="edit.png" alt="" class="img1"></button>
+                                    <button name="delete" type="submit" value="<?php echo $row['ID'] ?>"><img src="bin.png" alt="" class="img2"></button>
+                                </form>
                             </tr>
                             <?php
                         }
@@ -119,6 +127,7 @@
                         while ($row = mysqli_fetch_assoc($req)) {
                             ?>
                             <tr>
+                                <?php $index++; ?>
                                 <td><?php echo $row['ID']; ?></td>
                                 <td><?php echo $row['Nom']; ?></td>
                                 <td><?php echo $row['Prix']; ?>MAD</td>
@@ -129,57 +138,27 @@
                                 else echo '<td><button class="solde">Solde</button></td>';
                                 ?>
                                 <td class="opt">
-                                    <form action="get">
+                                    <form method="get">
                                     <button><img src="edit.png" alt="" class="img1"></button>
-                                    <button><img src="bin.png" alt="" class="img2" name="delete"></button>
+                                    <button name="delete" type="submit" value="<?php echo $row['ID'] ?>"><img src="bin.png" alt="" class="img2" ></button>
                                     </form>
                                 </td>
                             </tr>
                             <?php
                         }
                     }
+
                     if (isset($_GET['delete'])){
-                        $idToDelete = $_GET['delete'];
-                        $req = "DELETE * FROM produits WHERE ID = '$idToDelete'";
+                        $idP = $_GET['delete'];
+                        $req = "DELETE FROM produits WHERE ID ='$idP'";
                         $result = mysqli_query($cnx, $req);
                         if ($result) {
-                            
-                        } else {
-                            
+                            header("Location: display.php");
+                            exit();
                         }
                     }
                 ?>
                 <div class="ajout">
-            <p>Ajouter un produit</p>
-            <form action="" method="post" >
-            <div class="in1">
-                <input type="text" name="nom" placeholder="Nom du produit">
-            </div>
-            <div class="in1">
-                <input type="text" name="loca" placeholder="Location du stock"><br>
-            </div>
-            <div class="in2">
-                <input type="text" name="prix" placeholder="Prix">
-                <input type="number" name="quant" placeholder="Quantite"><br>
-            </div>
-            <div class="but">
-                <button class="b1" type="submit" name="OK" >+ Ajouter</button>
-                <button class="b2" type="reset">x Annuler</button>
-            </div>
-            </form>
-        </div>
-        <?php
-            include "connexion.php";
-            if(isset($_POST["OK"])){
-                $nomP=$_POST['nom'];
-                $prixP=$_POST['prix'];
-                $quanP=$_POST['quant'];
-                $req=mysqli_query($cnx,"Insert into Produits values(NULL,'$nomP','$prixP','$quanP')");
-                if(!$req){
-                    echo "Erreur ";
-                }
-            }
-        ?>
                 </table>
             </div>
         </div>

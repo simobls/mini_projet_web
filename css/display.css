@@ -147,11 +147,12 @@ td button {
 	margin-bottom: 8px;
 }
 
-.opt {
+.opt form {
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	justify-items: center;
-	margin: auto;
 }
 
 .opt button {
@@ -162,14 +163,14 @@ td button {
 }
 
 .img1 {
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 	opacity: 0.8;
 	margin-right: 10px;
 }
 
 .img2 {
-	width: 25px;
+	width: 27px;
 	height: 25px;
 	opacity: 0.8;
 }
