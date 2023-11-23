@@ -158,7 +158,6 @@
                         }
                     }
                 ?>
-                <div class="ajout">
                 </table>
             </div>
         </div>
