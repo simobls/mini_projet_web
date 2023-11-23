@@ -113,7 +113,7 @@
                                 if ($row['Quantite'] > 0) echo '<td><button class="actif">Actif</button></td>';
                                 else echo '<td><button class="solde">Solde</button></td>';
                                 ?>
-                                <td>
+                                <td class="opt">
                                     <form method="get">
                                         <button><img src="edit.png" alt="" class="img1"></button>
                                         <button name="delete" type="submit" value="<?php echo $row['ID'] ?>"><img src="bin.png" alt="" class="img2"></button>
