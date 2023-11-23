@@ -10,7 +10,7 @@
     <div class="cont">
         <div class="nav">
             <div class="ajout">
-                <button><a href="add.php"> + Add item </a></button>
+                <button><a href="add.php"> + Ajouter un produit </a></button>
             </div>
             <div class="search">
                 <form method="GET"> <!-- Ajout de la méthode GET -->
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="display">
-            <table>
+            <table border=0.5 frame=void rules=rows>
                 <tr>
                     <th>ID</th>
                     <th>Nom</th>
@@ -30,20 +30,55 @@
                     <th>Statut</th>
                     <th></th>
                 </tr>
-                <!-- <tr> -->
-                    <!-- <td>1</td>
+                <tr>
+                    <td>1</td>
+                    <td>Phone</td>
+                    <td>1200MAD</td>
+                    <td>12</td>
+                    <td>Depot 3</td>
+                    <td><button>Dispo</button></td>
+                    <td class="opt">
+                        <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                        <button><img src="/assets/bin.png" alt="" class="img2"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>jacket</td>
+                    <td>1200MAD</td>
+                    <td>12</td>
+                    <td>Depot 3</td>
+                    <td><button>Disponible</button></td>
+                    <td class="opt">
+                        <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                        <button><img src="/assets/bin.png" alt="" class="img2"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Phone</td>
+                    <td>1200MAD</td>
+                    <td>12</td>
+                    <td>Depot 3</td>
+                    <td><button>Vendu</button></td>
+                    <td class="opt">
+                        <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                        <button><img src="/assets/bin.png" alt="" class="img2"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
                     <td>Phone</td>
                     <td>1200MAD</td>
                     <td>12</td>
                     <td>Depot 3</td>
                     <td><button>Actif</button></td>
                     <td class="opt">
-                        <img src="/assets/edit.png" alt="" class="img1">
-                        <img src="/assets/bin.png" alt="" class="img2">
+                        <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                        <button><img src="/assets/bin.png" alt="" class="img2"></button>
                     </td>
-                </tr> -->
+                </tr>
                 <hr>
-                <!-- ... -->
 
             <?php
             include "connexion.php";
@@ -70,8 +105,8 @@
                             else echo '<td><button class="solde">Solde</button></td>';
                             ?>
                             <td class="opt">
-                                <img src="edit.png" alt="" class="img1">
-                                <img src="bin.png" alt="" class="img2">
+                                <button><img src="/assets/edit.png" alt="" class="img1"></button>
+                                <button><img src="/assets/bin.png" alt="" class="img2"></button>
                             </td>
                         </tr>
                         <?php

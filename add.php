@@ -8,25 +8,21 @@
 </head>
 <body>
 <div class="ajout" id="ajout">
-		<h1>Ajouter un produit</h1>
+		<p>Ajouter un produit</p>
 		<form action="" method="post" >
-        <div>
-            <label class="nom">Nom:</label>
+        <div class="in1">
             <input type="text" name="nom" placeholder="Nom du produit">
         </div>
-        <div>
-            <label class="nom">Location:</label>
+        <div class="in1">
             <input type="text" name="loca" placeholder="Location du stock"><br>
         </div>
-        <div>
-            <label class="nom">Prix:</label>
+        <div class="in2">
             <input type="text" name="prix" placeholder="Prix">
-            <label class="nom">Quantite:</label>
             <input type="text" name="quant" placeholder="Quantite"><br>
         </div>
-        <div>
-            <button type="submit" name="OK" >Ajouter</button>
-            <button type="reset">Annuler</button>
+        <div class="but">
+            <button class="b1" type="submit" name="OK" >+ Ajouter</button>
+            <button class="b2" type="reset">x Annuler</button>
         </div>
 		</form>
     </div>

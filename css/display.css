@@ -104,22 +104,24 @@ table {
 
 table th {
 	width: 10%;
-	pointer-events: none;
 	opacity: 0.4;
 	font-weight: 100;
+	border: whitesmoke;
+	border-width: 0px 0px 0.5px 0px;
 }
 table td {
 	width: 10%;
-	pointer-events: none;
 	font-family: 'Roboto Slab', serif;
 	font-size: 14px;
 	font-weight: 500;
+	border: solid whitesmoke;
+	border-width: 0.5px 0;
 }
 hr {
 	border-top: 1px solid whitesmoke;
 }
 tr {
-	line-height: 35px;
+	line-height: 40px;
 }
 .solde{
 	background-color: red;
@@ -134,7 +136,7 @@ td button {
 	box-sizing: border-box;
 	color: #ffffff;
 	cursor: pointer;
-	padding: 6px 24px;
+	padding: 6px 14px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	-ms-border-radius: 15px;
@@ -148,17 +150,25 @@ td button {
 	justify-content: center;
 	align-items: center;
 	justify-items: center;
+	margin: auto;
+}
+
+.opt button {
+	padding: 0 0;
+	background-color: transparent;
+	cursor: pointer;
+	opacity: 1;
 }
 
 .img1 {
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	opacity: 0.8;
 	margin-right: 10px;
 }
 
 .img2 {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	opacity: 0.8;
 }
