@@ -21,7 +21,7 @@ body {
 	margin: auto;
 	padding-left: 40px;
 	padding-right: 40px;
-	margin-top: 14vh;
+	margin-top: 20vh;
 	justify-content: center;
 	align-items: center;
 }
@@ -94,10 +94,10 @@ form div {
 	padding: 8px 20px;
 	border: none;
 	outline: none;
-	opacity: 0.8;
 	margin-right: 20px;
 	margin-left: 20px;
 	cursor: pointer;
+	opacity: 0.9;
 }
 
 .b1 {

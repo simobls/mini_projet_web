@@ -18,7 +18,7 @@
         </div>
         <div class="in2">
             <input type="text" name="prix" placeholder="Prix">
-            <input type="text" name="quant" placeholder="Quantite"><br>
+            <input type="number" name="quant" placeholder="Quantite"><br>
         </div>
         <div class="but">
             <button class="b1" type="submit" name="OK" >+ Ajouter</button>
