@@ -27,7 +27,7 @@ body {
 	-ms-border-radius:25px;
 	-o-border-radius:25px;
 	position: relative;
-	background-image: url(/assets/blob-scene-haikei\ \(3\).svg);
+	background-image: url(blob-scene-haikei\ \(3\).svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -104,6 +104,7 @@ body {
 	-moz-border-radius:25px;
 	-ms-border-radius:25px;
 	-o-border-radius:25px;
+	flex-direction: column;
 }
 
 .illu img {
@@ -199,61 +200,17 @@ body {
 	}
 }
 
-
-@media (max-width : 900px){
-	.illu {
-		display: none;
-		flex: 0;
-	}
-	.illu img {
-		display: none;
-	}
-	.cont {
-		width: 400px;
-		height: 600px;
-		background-color: #ffffff;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-	}
-	.formul {
-		flex: 1;
-		background-color: #ffffff;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-	}
-	.formul input{
-		margin-left: 95px;
-		background: transparent;
-		margin-bottom: 20px;
-	}
-	.formul button {
-		margin-left: 160px;
-		margin-top: 20px;
-	}
-	.text, .text2 {
-		left: 102px;
-	}
-	.formul input:focus + .text, .formul input:valid ~ .text{
-		top: 275px;
-		left: 108px;
-	}
-	.formul input:focus + .text2, .formul input:valid ~ .text2{
-		top: 325px;
-		left: 108px;
-	}
-	.formul img {
-		display: block;
-		width: 170px;
-		height: 170px;
-		margin-bottom: 30px;
-		margin-top: 10px;
-		animation: anim2 3s linear infinite;
-		-webkit-animation: anim2 3s linear infinite;
-	}
-	body {
-		background-image: none;
-		background-color: white;
-	}
+.erreur{
+	border-radius: 20px;
+	box-sizing: border-box;
+	color: #ffffff;
+	padding: 4px 20px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border: none;
+	background-color: red;
+	opacity: 0.5;
+	font-size: 14px;
 }

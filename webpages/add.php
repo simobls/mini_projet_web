@@ -3,13 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/add.css">
+    <link rel="stylesheet" href="../css/add.css">
 	<title>Document</title>
 </head>
 <body>
-<div class="ajout" id="ajout">
+    <?php
+        include "../php_actions/add_action.php";
+    ?>
+    <div class="ajout" id="ajout">
 		<p>Ajouter un produit</p>
-		<form action="" method="post" >
+		<form action="" method="post">
         <div class="in1">
             <input type="text" name="nom" placeholder="Nom du produit">
         </div>
@@ -26,17 +29,5 @@
         </div>
 		</form>
     </div>
-    <?php
-        include "connexion.php";
-        if(isset($_POST["OK"])){
-            $nomP=$_POST['nom'];
-            $prixP=$_POST['prix'];
-            $quanP=$_POST['quant'];
-            $req=mysqli_query($cnx,"Insert into Produits values(NULL,'$nomP','$prixP','$quanP')");
-            if(!$req){
-                echo "Erreur ";
-            }
-        }
-    ?>
 </body>
 </html>

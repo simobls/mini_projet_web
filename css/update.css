@@ -1,0 +1,68 @@
+.update {
+	display: none;
+	flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    border-radius: 20px;
+}
+form div {
+    align-items: baseline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.in {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inin {
+    margin: 10px;
+    margin-bottom: 0;
+}
+.in3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.in3 input {
+	width: 200px;
+	border-radius: 15px;
+	box-sizing: border-box;
+	padding: 8px 20px;
+	border: none;
+	background-color: white;
+	outline: none;
+    margin-left: 5px;
+}
+
+.but {
+	display: flex;
+	justify-content: center;
+    flex-direction: row;
+    margin-top: 0;
+}
+
+.but button{
+	border-radius: 15px;
+	box-sizing: border-box;
+	padding: 8px 20px;
+	border: none;
+	outline: none;
+	margin-right: 20px;
+	margin-left: 20px;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.b1 {
+	background-color: #83F5CE;
+	color: #ffffff;
+}
+
+.b2{
+	background-color: rgb(252, 85, 85);
+	color: #ffffff;
+}

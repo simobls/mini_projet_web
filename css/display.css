@@ -10,6 +10,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	display: flex;
 }
 
 .cont {
@@ -31,6 +32,10 @@ body {
 	margin-top: 5vh;
 	overflow-x: hidden;
     overflow-y: auto;
+}
+
+.cont::-webkit-scrollbar{
+	width: 0;
 }
 
 .nav {
@@ -83,7 +88,7 @@ body {
 	border: none;
 	background-color: whitesmoke;
 	outline: none;
-	background-image: url(/assets/search-interface-symbol\ \(1\).png);
+	background-image: url(search-interface-symbol\ \(1\).png);
     background-repeat: no-repeat;
     text-indent: 20px;
 	background-size: 15px 15px;
@@ -117,12 +122,14 @@ table td {
 	font-weight: 500;
 	border: solid whitesmoke;
 	border-width: 0.5px 0;
+	text-transform: capitalize;
 }
 hr {
 	border-top: 1px solid whitesmoke;
 }
 tr {
-	line-height: 40px;
+	line-height: 50px;
+	text-transform: capitalize;
 }
 .solde{
 	background-color: red;
@@ -153,6 +160,7 @@ td button {
 	justify-content: center;
 	align-items: center;
 	justify-items: center;
+	cursor: pointer;
 }
 
 .opt button {
@@ -167,6 +175,7 @@ td button {
 	height: 25px;
 	opacity: 0.8;
 	margin-right: 10px;
+	margin-top: 10px;
 }
 
 .img2 {

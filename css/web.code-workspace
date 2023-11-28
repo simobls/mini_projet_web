@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "web",
+			"path": "../../../../../web"
+		},
+		{
+			"name": "myPhp",
+			"path": "../.."
+		},
+		{
+			"name": "eclipse-workspace",
+			"path": "../../../../../Users/pc/eclipse-workspace"
+		},
+		{
+			"name": "TP1",
+			"path": "../../../../../Users/pc/Desktop/TP1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "myPhp"
+	}
+}
