@@ -4,15 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/add.css">
-	<title>Document</title>
+	<title>Ajout</title>
 </head>
 <body>
-    <?php
-        include "../php_actions/add_action.php";
-    ?>
     <div class="ajout" id="ajout">
 		<p>Ajouter un produit</p>
-		<form action="" method="post">
+		<form action="../php_actions/add_action.php" method="post" >
         <div class="in1">
             <input type="text" name="nom" placeholder="Nom du produit">
         </div>
@@ -29,5 +26,20 @@
         </div>
 		</form>
     </div>
+    <?php
+        include "../php_actions/connexion.php";
+        if(isset($_POST["OK"])){
+            $nomP=$_POST['nom'];
+            $prixP=$_POST['prix'];
+            $quanP=$_POST['quant'];
+            $locationP=$_POST['loca'];
+            $req=mysqli_query($cnx,"Insert into produits values(NULL,'$nomP','$prixP','$quanP','$locationP')");
+            if(!$req){
+                echo "Erreur";
+            }else{
+                header("Location:../webpages/display.php");
+            }
+        }
+    ?>
 </body>
 </html>

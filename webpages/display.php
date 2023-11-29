@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/display.css">
     <link rel="stylesheet" href="../css/update.css">
-    <title>Document</title>
+    <title>Inventaire</title>
     <script src= 
         "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
     </script>
@@ -14,7 +14,7 @@
     <div class="cont">
         <div class="nav">
             <div class="ajout2">
-                <button id="add"><a href="add.php"> + Ajouter un produit </a></button>
+                <button><a href="add.php"> + Ajouter un produit </a></button>
             </div>
             <div class="search">
                 <form method="get">
