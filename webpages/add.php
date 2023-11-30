@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/add.css">
-	<title>Ajout</title>
+	<title>Ajouter</title>
 </head>
 <body>
     <div class="ajout" id="ajout">
 		<p>Ajouter un produit</p>
-		<form action="../php_actions/add_action.php" method="post" >
+		<form method="post" >
         <div class="in1">
             <input type="text" name="nom" placeholder="Nom du produit">
         </div>
@@ -36,7 +36,7 @@
             $req=mysqli_query($cnx,"Insert into produits values(NULL,'$nomP','$prixP','$quanP','$locationP')");
             if(!$req){
                 echo "Erreur";
-            }else{
+            } else {
                 header("Location:../webpages/display.php");
             }
         }

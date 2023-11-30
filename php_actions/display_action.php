@@ -61,5 +61,35 @@
         }
     }
     $req = mysqli_query($cnx, "SELECT * FROM produits");
+    if(isset($_GET['triID'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY ID ASC");
+    }
+    elseif(isset($_GET['triNom'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Nom ASC");
+    }
+    elseif(isset($_GET['triPr'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Prix ASC");
+    }
+    elseif(isset($_GET['triQuan'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Quantite ASC");
+    }
+    elseif(isset($_GET['triLoca'])){
+    $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Location ASC");
+    }
+    elseif(isset($_GET['triIDDes'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY ID DESC");
+    }
+    elseif(isset($_GET['triNomDes'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Nom DESC");
+    }
+    elseif(isset($_GET['triPrDes'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Prix DESC");
+    }
+    elseif(isset($_GET['triQuanDes'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Quantite DESC");
+    }
+    elseif(isset($_GET['triLocaDes'])){
+        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Location DESC");
+    }
     displayInventory($req);
 ?>
