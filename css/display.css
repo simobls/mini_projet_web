@@ -114,7 +114,9 @@ table th {
 	font-weight: 100;
 	border: whitesmoke;
 	border-width: 0px 0px 0.5px 0px;
+	align-items: center;
 }
+
 table td {
 	width: 10%;
 	font-family: 'Roboto Slab', serif;
@@ -182,4 +184,16 @@ td button {
 	width: 27px;
 	height: 25px;
 	opacity: 0.8;
+}
+
+.tri {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.tri1{
+	margin-left: 10px;
 }
