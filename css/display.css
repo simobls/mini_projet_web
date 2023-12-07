@@ -135,11 +135,13 @@ tr {
 }
 .solde{
 	background-color: red;
-	padding: 6px 20px;
+	padding: 6px 25px;
 	opacity: 0.5;
 }
 .actif{
 	background-color: #83F5CE;
+	padding: 6px 13px;
+	opacity: 1;
 }
 td button {
 	border-radius: 15px;
@@ -196,4 +198,8 @@ td button {
 
 .tri1{
 	margin-left: 10px;
+}
+
+.update-btn{
+	cursor: pointer;
 }

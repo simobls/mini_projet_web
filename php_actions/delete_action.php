@@ -4,7 +4,7 @@
         $req = "DELETE FROM produits WHERE ID ='$idP'";
         $result = mysqli_query($cnx, $req);
         if ($result) {
-            header("Location:display.php");
+            echo " <script> window.location.href='display.php';</script>";
             exit();
         }
     }

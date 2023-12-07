@@ -9,11 +9,11 @@
             $req = "UPDATE produits SET nom='$nom', prix='$prix', quantite='$quant', location='$location' WHERE id ='$id'";
         
             $result = mysqli_query($cnx, $req);
- 
+
             if ($result) {
-                header("Location:display.php");
+                echo "<script> window.location.href:'display.php' </script>";
             } else {
-                echo "Erreur lors de la mise à jour.";
+                $errUpdate = "Erreur lors de la mise à jour.";
             }
         }
 ?>

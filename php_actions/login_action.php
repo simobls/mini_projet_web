@@ -6,7 +6,7 @@
             $passU=$_POST['password'];
             $erreur="";
 
-            $req="SELECT * FROM Utilisateurs where user='$emailU' and password='$passU'";
+            $req="SELECT * FROM Utilisateurs where email='$emailU' and password='$passU'";
             $res=mysqli_query($cnx,$req);
             if(mysqli_num_rows($res)>0) {
                 header("Location:display.php");

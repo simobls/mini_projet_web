@@ -2,7 +2,6 @@
     include "connexion.php";
     include "delete_action.php";
     include "update_action.php";
-    include "add_action.php";
 
     function displayInventory($req){
         $index = 1;
@@ -42,17 +41,17 @@
                                     <div class='inin'>
                                         <div class='in3'>
                                             <label>Prix:</label>
-                                            <input type='text' name='prix' value='$row[prix]'>
+                                            <input type='number' name='prix' value='$row[prix]' min='0.01' step='0.01'>
                                         </div>
                                         <div class='in3'>
                                             <label>Quantite:</label>
-                                            <input type='text' name='quantite' value='$row[quantite]'>
+                                            <input type='number' name='quantite' value='$row[quantite]' min='0'>
                                         </div>
                                     </div>
                                 </div>
                                 <div class='but'>
                                     <button type='submit' value='Modifier' name = 'modifier' id='close' class='b1'>Modifier</button>
-                                    <input type='hidden' name='id' value='$row[ID]'> 
+                                    <input type='hidden' name='id' value='$row[ID]'>
                                     <button id='close' class='b2'>Annuler</button>
                                 </div>
                             </form>
@@ -61,35 +60,17 @@
         }
     }
     $req = mysqli_query($cnx, "SELECT * FROM produits");
-    if(isset($_GET['triID'])){
-        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY ID ASC");
-    }
-    elseif(isset($_GET['triNom'])){
+    if(isset($_GET['triNom'])){
         $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Nom ASC");
     }
     elseif(isset($_GET['triPr'])){
         $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Prix ASC");
-    }
-    elseif(isset($_GET['triQuan'])){
-        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Quantite ASC");
-    }
-    elseif(isset($_GET['triLoca'])){
-    $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Location ASC");
-    }
-    elseif(isset($_GET['triIDDes'])){
-        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY ID DESC");
     }
     elseif(isset($_GET['triNomDes'])){
         $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Nom DESC");
     }
     elseif(isset($_GET['triPrDes'])){
         $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Prix DESC");
-    }
-    elseif(isset($_GET['triQuanDes'])){
-        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Quantite DESC");
-    }
-    elseif(isset($_GET['triLocaDes'])){
-        $req=mysqli_query($cnx,"SELECT * FROM produits ORDER BY Location DESC");
     }
     displayInventory($req);
 ?>
